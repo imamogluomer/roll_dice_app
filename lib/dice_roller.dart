@@ -15,8 +15,11 @@ class _DiceRollerState extends State<DiceRoller> {
   var currentDiceRoll = 2;
 
   void rollDice() {
+    //var diceRoll = Random().nextInt(6) + 1;
     setState(() {
+      //currentDiceRoll = Random().nextInt(6) + 1; When user click the button it will create new object every time. It's redundant.
       currentDiceRoll = randomizer.nextInt(6) + 1;
+      //activeDiceImage = 'assets/images/dice-$diceRoll.png';
     });
   }
 
@@ -33,13 +36,13 @@ class _DiceRollerState extends State<DiceRoller> {
           height: 20,
         ),
         ElevatedButton(
-          onPressed: rollDice,
-          style: ElevatedButton.styleFrom(
-              foregroundColor: const Color.fromARGB(255, 0, 0, 0),
-              textStyle:
-                  const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          child: const Text("Roll!"),
-        )
+            onPressed: rollDice,
+            style: ElevatedButton.styleFrom(
+                //padding: const EdgeInsets.only(top: 20),
+                foregroundColor: const Color.fromARGB(255, 0, 0, 0),
+                textStyle:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            child: const Text('Roll!'))
       ],
     );
   }
