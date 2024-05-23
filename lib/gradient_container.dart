@@ -1,4 +1,3 @@
-import 'package:flutter/widgets.dart';
 import 'package:roll_dice_app/dice_roller.dart';
 import 'package:flutter/material.dart';
 
@@ -47,7 +46,7 @@ class GradientContainer extends StatelessWidget {
         gradient: LinearGradient(
             colors: [color1, color2], begin: startAlignment, end: endAlignment),
       ),
-      child: Center(
+      child: const Center(
         child: DiceRoller(),
       ),
     );
